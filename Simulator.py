@@ -1,7 +1,5 @@
 from cluster import Cluster
-from Automated_Annotator import Automated_Annotator
 import Train_YOLOv8
-import Edit_Detector
 from torch import nn
 import pandas as pd
 import os
@@ -124,6 +122,7 @@ class Simulator:
         self.workingCSV.to_csv(os.path.join(self.train_path, f"WorkingCSV_{method}.csv"), index=False)
 
     def createTrainingCSV(self, method):
+        self.workingCSV = pd.read_csv(os.path.join(self.train_path, f"WorkingCSV_{method}.csv"))
         # self.workingCSV.to_csv(os.path.join(self.train_path, f"WorkingCSV_{method}.csv"), index=False)
         entries = self.workingCSV.loc[self.workingCSV["Status"] == "Complete"]
         trainCSV = pd.concat([entries.copy(), entries.copy(), entries.copy()])
