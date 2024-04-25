@@ -44,10 +44,16 @@
    - You Label file should already be updated, you can try visualizer to see if this is actually correct
   
 4. Background:
+   - *** the images are fixed at 1920 * 1080, if yours is not this ratio change it here : self.image_width = 1920 self.image_height = 1080 ***
    - ***wait*** means that the window will freeze, please try not to do anything at that moment
    - the labels are saved in YOLO txt file format for all labeled images in the image folder and they are also updated in your Label file
           # Additionally, while annotation the working process and results can be observed in the pulled Qt_Autoannotater folder's Model folder
    - The program enables Manual select number of frames to annotate by checking that box, this is because the auto selection will become very frequent and only a small number of images will be selected for editing, ***not recommended*** but you can turn it on to accelerated the annotation process when confident and needed
+   - *** Change box thickness and label font size if needed
+       - rect_item.setPen(QPen(color, 10)) is the box thickness
+       - font_size = 40 is the for label txt size
+       - And try not use key "A" for adjust
+     These all may cause the image to shrink in certain circumstances
        
 # Annotation commands
 
