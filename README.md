@@ -1,7 +1,8 @@
 # Qt_Autoannotater Instructions:
 
-1. Required packages:
+1. Required packages: (more comprehensive & detailed package in requirements.txt)
    - pytorch
+   - PyQt6
    - PyQt5
    - pandas
    - PIL
